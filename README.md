@@ -1,4 +1,4 @@
-# How to deploy a three-tier architecture in AWS using Terraform?
+# Deploying a 3-tier Environment in AWS using Terraform
 
 ### What is Terraform?
 
