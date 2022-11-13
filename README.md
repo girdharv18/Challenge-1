@@ -1,5 +1,18 @@
 # Deploying a 3-tier Environment in AWS using Terraform
 
+### What is a 3-tier architecture?
+
+A 3-tier architecture is a software architecture pattern where the application is broken down into three logical tiers: Presentation tier, Logic tier and Data tier.
+
+The architecture is used in a client-server application such as a web application that has the Frontend, the Backend and the Database. Each of these layers or tiers does a specific task and can be managed independently of each other. It is a way of building an application where the Frontend, the Backend and the Database are both sitting in one place.
+
+### Benefits:
+
+* Scalability
+* High Availability
+* Fault Tolerant
+* Security
+
 ### What is Terraform?
 
 Terraform is an open-source infrastructure as a code (IAC) tool that allows to create, manage & deploy the production-ready environment. Terraform codifies cloud APIs into declarative configuration files. Terraform can manage both existing service providers and custom in-house solutions.
