@@ -10,7 +10,6 @@ The architecture is used in a client-server application such as a web applicatio
 
 * Scalability
 * High Availability
-* Fault Tolerant
 * Security
 
 ### What is Terraform?
