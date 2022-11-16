@@ -22,13 +22,8 @@ In this tutorial, I will deploy a 3-tier application in AWS using Terraform.
 
 ![2](https://github.com/DhruvinSoni30/Terraform-AWS-3tier-Architecture/blob/main/2.png)
 
-### Prerequisites:
 
-* Basic knowledge of AWS & Terraform
-* AWS account
-* AWS Access & Secret Key
-
-> In this project, I have used some variables also that I will discuss later in this article.
+> In this project, I have used some variables also.
 
 **Step 1:- Create a file for the VPC**
 
