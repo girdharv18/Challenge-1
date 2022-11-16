@@ -273,19 +273,19 @@ In this tutorial, I will deploy a 3-tier application in AWS using Terraform.
   ```
   # Creating External LoadBalancer
   resource "aws_lb" "external-alb" {
-    name               = "External LB"
+    name               = "External-LB"
     internal           = false
     load_balancer_type = "application"
     security_groups    = [aws_security_group.demosg.id]
     subnets            = [aws_subnet.public-subnet-1.id, aws_subnet.public-subnet-1.id]
   }
   resource "aws_lb_target_group" "target-elb" {
-    name     = "ALB TG"
+    name     = "ALB-TG"
     port     = 80
     protocol = "HTTP"
     vpc_id   = aws_vpc.demovpc.id
   }
-  resource "aws_lb_target_group_attachment" "attachment" {
+  resource "aws_lb_target_group_attachment1" "attachment" {
     target_group_arn = aws_lb_target_group.external-alb.arn
     target_id        = aws_instance.demoinstance.id
     port             = 80
@@ -293,7 +293,7 @@ In this tutorial, I will deploy a 3-tier application in AWS using Terraform.
     aws_instance.demoinstance,
   ]
   }
-  resource "aws_lb_target_group_attachment" "attachment" {
+  resource "aws_lb_target_group_attachment2" "attachment" {
     target_group_arn = aws_lb_target_group.external-alb.arn
     target_id        = aws_instance.demoinstance1.id
     port             = 80
@@ -336,7 +336,7 @@ In this tutorial, I will deploy a 3-tier application in AWS using Terraform.
     engine_version         = "8.0.20"
     instance_class         = "db.t2.micro"
     multi_az               = true
-    name                   = "mydb"
+    name                   = "db_name"
     username               = "username"
     password               = "password"
     skip_final_snapshot    = true
@@ -382,15 +382,15 @@ In this tutorial, I will deploy a 3-tier application in AWS using Terraform.
     default = "10.0.3.0/24"
   }
   # Defining CIDR Block for 3rd Subnet
-  variable "subnet2_cidr" {
+  variable "subnet3_cidr" {
     default = "10.0.4.0/24"
   }
   # Defining CIDR Block for 3rd Subnet
-  variable "subnet2_cidr" {
+  variable "subnet4_cidr" {
     default = "10.0.5.0/24"
   }
   # Defining CIDR Block for 3rd Subnet
-  variable "subnet2_cidr" {
+  variable "subnet5_cidr" {
     default = "10.0.6.0/24" 
   }
   ```
